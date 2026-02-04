@@ -10,10 +10,22 @@
     "type": "git",
     "url": "https://github.com/withfrontmatter/semantic-placeholder-vscode"
   },
-  "engines": { "vscode": "^1.85.0" },
-  "categories": ["Snippets"],
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
   "readme": "README.marketplace.md",
-  "keywords": ["placeholder", "svg", "layout", "image", "frontend", "astro", "vite"],
+  "keywords": [
+    "placeholder",
+    "svg",
+    "layout",
+    "image",
+    "frontend",
+    "astro",
+    "vite"
+  ],
   "bugs": {
     "url": "https://github.com/withfrontmatter/semantic-placeholder-vscode/issues"
   },
@@ -27,11 +39,26 @@
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
-      { "command": "semanticPlaceholder.insert", "title": "Placeholder SVG: Insert…" },
-      { "command": "semanticPlaceholder.insertRatio", "title": "Placeholder SVG: Insert with Ratio…" },
-      { "command": "semanticPlaceholder.hero", "title": "Placeholder SVG: Hero (1440×720)" },
-      { "command": "semanticPlaceholder.card", "title": "Placeholder SVG: Card (400×300)" },
-      { "command": "semanticPlaceholder.avatar", "title": "Placeholder SVG: Avatar (128×128)" }
+      {
+        "command": "semanticPlaceholder.insert",
+        "title": "Placeholder SVG: Insert…"
+      },
+      {
+        "command": "semanticPlaceholder.insertRatio",
+        "title": "Placeholder SVG: Insert with Ratio…"
+      },
+      {
+        "command": "semanticPlaceholder.hero",
+        "title": "Placeholder SVG: Hero (1440×720)"
+      },
+      {
+        "command": "semanticPlaceholder.card",
+        "title": "Placeholder SVG: Card (400×300)"
+      },
+      {
+        "command": "semanticPlaceholder.avatar",
+        "title": "Placeholder SVG: Avatar (128×128)"
+      }
     ],
     "menus": {
       "editor/context": [
@@ -57,7 +84,7 @@
   "devDependencies": {
     "@types/node": "^20.11.30",
     "@types/vscode": "^1.85.0",
-    "esbuild": "^0.20.2",
+    "esbuild": "^0.27.2",
     "typescript": "^5.4.5",
     "vsce": "^2.15.0"
   }
