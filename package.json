@@ -1,0 +1,58 @@
+{
+  "name": "semantic-placeholder-vscode",
+  "displayName": "Placeholder SVG (Frontmatter)",
+  "description": "Deterministic SVG placeholder images as data-URIs (width×height).",
+  "version": "0.0.1",
+  "publisher": "withfrontmatter",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/withfrontmatter/semantic-placeholder-vscode"
+  },
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onCommand=semanticPlaceholder.insert",
+    "onCommand=semanticPlaceholder.insertRatio",
+    "onCommand=semanticPlaceholder.hero",
+    "onCommand=semanticPlaceholder.card",
+    "onCommand=semanticPlaceholder.avatar"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      { "command": "semanticPlaceholder.insert", "title": "Placeholder SVG: Insert…" },
+      { "command": "semanticPlaceholder.insertRatio", "title": "Placeholder SVG: Insert with Ratio…" },
+      { "command": "semanticPlaceholder.hero", "title": "Placeholder SVG: Hero (1440×720)" },
+      { "command": "semanticPlaceholder.card", "title": "Placeholder SVG: Card (400×300)" },
+      { "command": "semanticPlaceholder.avatar", "title": "Placeholder SVG: Avatar (128×128)" }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "semanticPlaceholder.insert",
+          "when": "editorTextFocus",
+          "group": "navigation@20"
+        },
+        {
+          "command": "semanticPlaceholder.insertRatio",
+          "when": "editorTextFocus",
+          "group": "navigation@21"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "build": "esbuild ./src/extension.ts --bundle --platform=node --format=cjs --external:vscode --outfile=dist/extension.js",
+    "watch": "esbuild ./src/extension.ts --bundle --platform=node --format=cjs --external:vscode --outfile=dist/extension.js --watch",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.20.2",
+    "typescript": "^5.4.5",
+    "vsce": "^2.15.0"
+  }
+}
