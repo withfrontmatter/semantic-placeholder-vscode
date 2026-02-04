@@ -2,9 +2,10 @@
   "name": "semantic-placeholder-vscode",
   "displayName": "Placeholder SVG (Frontmatter)",
   "description": "Deterministic SVG placeholder images as data-URIs (width×height).",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "withfrontmatter",
   "license": "MIT",
+  "icon": "icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/withfrontmatter/semantic-placeholder-vscode"
